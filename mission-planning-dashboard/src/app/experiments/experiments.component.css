@@ -1,0 +1,18 @@
+.experiments
+{
+    color:greenyellow;
+    padding: 10px;
+    text-align: center;
+}
+img
+{
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+}
+ul
+{
+    text-align: left;
+}

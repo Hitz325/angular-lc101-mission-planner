@@ -1,5 +1,15 @@
 .box
 {
     display: flex;
-    padding: 10ps;
+    padding: 10px;
+    justify-content: center;
+    text-align: left;
+
+    
+}
+
+body
+{
+    background-color: brown;
+    text-align: center;
 }
