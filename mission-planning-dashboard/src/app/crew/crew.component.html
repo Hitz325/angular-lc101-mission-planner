@@ -1,11 +1,15 @@
-<div class="crew">
-    <h3> Crew<br><br><img src="assets/crew.jpg" alt="(something wrong)"></h3>
-    <ul>
-        <li>Jessica Watkins</li>
-        <li>Raja Chari</li>
-        <li>Jasmin Moghbeli</li>
-        <li>{{crew[0]}}</li>
-        <li>{{crew[1]}}</li>
-        <li>{{crew[2]}}</li>
-    </ul>
-</div>
+<h3>Crew</h3>
+<ul>
+  <li *ngFor="let member of crew">
+    <span *ngIf="memberBeingEdited !== member; else elseBlock">
+  <span (click)="edit(member)">{{member.name}}</span></li>
+  <button (click)="remove(member)">x</button>
+</span>
+<ng-template #elseBlock>
+  <input type="text" #updateName>
+  <button (click)="updateRocket(rocket.value)">Save</button>
+</ng-template>
+<input #name type="text"/>
+<label>First mission<input #firstMission type="checkbox"/></label>
+<button (click)="add(name.value, firstMission.checked)">Add</button>
+</ul>
